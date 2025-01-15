@@ -1,40 +1,33 @@
-Hand gesture recognition models are systems designed to identify and interpret human hand movements using technology. These models are commonly used in applications like sign language recognition, gaming, human-computer interaction, and virtual reality.
+# Hand Gesture Recognition System
+This project aims to develop a Hand gesture recognition model that can accurately identify and classify different hand gestures from image or video data, enabling intuitive human-computer interaction and gesture-based control systems.
 
-Here’s a simple explanation of how they work:
+# Description
+This project aims to develop a Deep Learning Model for Hand Gesture Recognition for gesture-based control systems. The model uses Convolution Neural Networks (CNN) Architecture to extract information from the images.
+The model is trained over 15,000 images of hand gestures for about 100 epochs. The model is trained to classify 10 hand gestures given in the dataset:
 
-### 1. **Data Collection**  
-The first step is to collect images or videos of different hand gestures. These are captured using cameras or sensors. For example, a dataset might include images of a hand showing numbers (1, 2, 3, etc.) or specific signs like "stop" or "ok."
+*    Palm
+*    Palm - Moved
+*    Fist
+*    Fist - Moved
+*    Thumb
+*    Index
+*    OK
+*    Down
+*    L
+*    C
 
-### 2. **Preprocessing**  
-Before feeding the data into the model, it's processed to improve quality and make it consistent. This includes:
-   - **Cropping** the image to focus on the hand.
-   - **Resizing** all images to the same dimensions.
-   - Converting the image to grayscale (optional) to reduce complexity.
-   - **Normalization** to adjust pixel values for better model performance.
+The model produces an accuracy of 88% on the Testing Dataset
 
-### 3. **Feature Extraction**  
-Features are the unique details in an image that distinguish one gesture from another. The model detects shapes, edges, and patterns in the hand image. For instance, the position of fingers, palm shape, and angle are key features.
+# Evaluation
 
-### 4. **Model Training**  
-A machine learning or deep learning model is trained using the processed dataset.  
-   - **Traditional Approaches**: Models like Support Vector Machines (SVM) or K-Nearest Neighbors (KNN) are used with hand-crafted features.  
-   - **Deep Learning**: Convolutional Neural Networks (CNNs) are popular because they automatically learn features from the images.
+![Training History](https://github.com/LogeswaranSR/PRODIGY_ML_04/assets/131794661/c0ba4cea-0e0e-45b8-a56c-8e0337969b66)
 
-### 5. **Testing and Validation**  
-After training, the model is tested on new images to ensure it recognizes gestures accurately. Validation helps fine-tune the model to reduce errors.
 
-### 6. **Real-Time Application**  
-Once trained, the model can recognize gestures in real-time. A camera captures the hand gesture, processes the image, and the model predicts the gesture.
+# Inference
+![Hand Gesture model Inference](https://github.com/LogeswaranSR/PRODIGY_ML_04/assets/131794661/8f5dba09-3971-4602-b453-536773ef9f12)
 
-### Example Workflow:  
-1. **Input**: A live video feed or an image of a hand.  
-2. **Preprocessing**: The system identifies and isolates the hand.  
-3. **Model Prediction**: The model matches the input gesture to its learned patterns.  
-4. **Output**: The recognized gesture is displayed or used as a command.
 
-### Challenges:
-- **Lighting Variations**: Poor lighting can affect recognition accuracy.  
-- **Complex Backgrounds**: It may confuse the system.  
-- **Hand Variability**: Differences in hand sizes, orientations, or skin tones can pose challenges.
+# Dataset
+The dataset used here is **Hand Gesture Recognition Database** provided by gti-upm in Kaggle. Hand gesture recognition database is composed by a set of near infrared images acquired by the Leap Motion sensor. The database is composed by 10 different hand-gestures (showed above) that were performed by 10 different subjects (5 men and 5 women). The database, as a whole, consists of 20,000 annotated images, separated into folders based on the hand gesture and the subject performed.
 
-Would you like help with a specific part of building or understanding this model?# Hand-gesture-recognition_model
+Dataset Link: [Hand Gesture Recognition Database](https://www.kaggle.com/datasets/gti-upm/leapgestrecog)
